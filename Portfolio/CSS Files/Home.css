@@ -10,7 +10,7 @@
 body {
   font-family: var(--baloo-font);
   line-height: 1.6;
-  background-color: #ffeea9;
+  background-color: #4099ff;
 }
 
 h1 {
@@ -19,11 +19,11 @@ h1 {
 }
 
 h1:hover {
-  color: #ff7d29;
+  color: #e66916;
 }
 
 header {
-  background-color: #ffbf78;
+  background-color: #1b65a1;
   color: #feffd2;
   padding: 1rem 0;
   text-align: center;
@@ -64,7 +64,7 @@ footer {
   text-align: center;
   padding: 1rem;
   width: 97.67vw;
-  background-color: #ffbf78;
+  background-color: #1781d8;
   color: #feffd2;
   margin-top: 2rem;
   position: absolute;
@@ -81,7 +81,7 @@ footer {
 #About > h2 {
   line-height: 100%;
   font-size: 60px;
-  color: #ffbf78;
+  color: #ffa53f;
   font-weight: 900;
 }
 
@@ -89,14 +89,14 @@ footer {
   font-size: 45px;
   color: #feffd2;
   font-weight: 900;
-  -webkit-text-stroke: 2px #ffbf78;
+  -webkit-text-stroke: 2px #ffa53f;
 }
 
 .textSpan > span {
   margin: 0;
-  font-size: 20px;
-  color: #ffbf78;
-  font-weight: 900;
+  font-size: 21px;
+  color: #feb057;
+  font-weight: 1000;
 }
 
 #About > span > img {
