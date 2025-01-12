@@ -5,11 +5,25 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  color: white;
 }
 
 body {
-  background: #f9f9f9;
-  color: #333;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  background-size: 400% 400%;
+  animation: wave 5s ease infinite;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header {
@@ -33,7 +47,7 @@ header {
   margin: 6px;
   transition: 0.3s;
   font-weight: 500;
-  color: #333;
+  color: white;
 }
 
 #Big-sc-nav li:hover {
@@ -93,7 +107,7 @@ header {
   text-align: center;
   transition: 0.3s;
   font-weight: 500;
-  color: #333;
+  color: white;
 }
 
 #dropdown-sc-nav li:hover {
@@ -102,8 +116,79 @@ header {
   cursor: pointer;
 }
 
-/* Responsive styles */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: calc(100vh - 10vh);
+  padding: 20px;
+  box-sizing: border-box;
+}
 
+.hero-section .right {
+  border-radius: 200px;
+  border: 12px solid cornflowerblue;
+  background-color: lightblue;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-section .left {
+  width: 50vw;
+  max-width: 600px;
+}
+
+.hero-section #name {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+}
+
+.hero-section #desc {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.hero-section button {
+  width: 120px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  color: blueviolet;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section button:focus {
+  outline: none;
+}
+
+.hero-section button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .right:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Responsive styles */
 @media (min-width: 768px) {
   #dropdown-sc-nav {
     display: none;
@@ -111,5 +196,51 @@ header {
 
   #Big-sc-nav {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-section .left {
+    width: 80vw;
+    text-align: center;
+  }
+
+  .hero-section #name {
+    font-size: 28px;
+  }
+
+  .hero-section #desc {
+    font-size: 14px;
+  }
+
+  .hero-section button {
+    width: 100px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-section .right {
+    margin-top: 12px;
+  }
+
+  .hero-section #name {
+    font-size: 24px;
+  }
+
+  .hero-section #desc {
+    font-size: 12px;
+  }
+
+  .hero-section button {
+    width: 90px;
+    height: 35px;
+    font-size: 12px;
   }
 }
