@@ -83,7 +83,7 @@ header {
 }
 
 #dropdown-sc-nav ul.show {
-  max-height: 300px; /* Set to a value greater than the expected height of the menu */
+  max-height: 300px;
   opacity: 1;
 }
 
@@ -101,6 +101,8 @@ header {
   color: #007bff;
   cursor: pointer;
 }
+
+/* Responsive styles */
 
 @media (min-width: 768px) {
   #dropdown-sc-nav {
