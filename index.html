@@ -11,12 +11,12 @@
       <!-- Large screen navigation -->
       <nav id="Big-sc-nav">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Resume</li>
-          <li>Services</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li id="home">Home</li>
+          <li id="about">About</li>
+          <li id="resume">Resume</li>
+          <li id="services">Services</li>
+          <li id="projects">Projects</li>
+          <li id="contact">Contact</li>
         </ul>
       </nav>
       <!-- Dropdown navigation -->
@@ -24,35 +24,57 @@
         <h3>&lt; Aayan Mumtaz &gt;</h3>
         <button>☰ Menu</button>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Resume</li>
-          <li>Services</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li id="home">Home</li>
+          <li id="about">About</li>
+          <li id="resume">Resume</li>
+          <li id="services">Services</li>
+          <li id="projects">Projects</li>
+          <li id="contact">Contact</li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="hero-section">
+      <section id="home">
+        <div class="hero-section">
+          <div class="left">
+            <p>Hello, My Name Is</p>
+            <p id="name">Aayan Mumtaz</p>
+            <p id="desc">
+              I'm a dedicated Front-End Developer passionate about building
+              seamless, interactive websites. With a keen eye for design and
+              functionality, I specialize in creating responsive web
+              applications using modern tools like ReactJS.
+            </p>
+            <button>Contact Me</button>
+          </div>
+          <div class="right">
+            <img src="./Assets/Me2.png" width="256" alt="Me" />
+          </div>
+        </div>
+      </section>
+      <section id="about">
         <div class="left">
-          <p>Hello, My Name Is</p>
-          <p id="name">Aayan Mumtaz</p>
-          <p id="desc">
-            I'm a dedicated Front-End Developer passionate about building
-            seamless, interactive websites. With a keen eye for design and
-            functionality, I specialize in creating responsive web applications
-            using modern tools like ReactJS. I focus on delivering
-            user-centered, high-performance experiences that are both visually
-            appealing and easy to use. Always eager to learn and improve, I
-            strive to stay ahead of web development trends and techniques.
-          </p>
-          <button>Contact Me</button>
+          <img src="./Assets/Me.png" alt="Me" />
         </div>
         <div class="right">
-          <img src="./Assets/Me2.png" width="256" alt="Me" />
+          <p class="heading">About Myself</p>
+          <p class="description">
+            I’m Aayan Mumtaz, a 17-year-old front-end web developer passionate
+            about crafting interactive and visually appealing websites.
+            Currently, I’m pursuing a Diploma of Associate Engineering in
+            Computer Information Technology, where I’m honing my skills in
+            programming and software development. With a strong focus on
+            learning and innovation, I aim to bridge creativity with
+            functionality in my projects. My ultimate goal is to become a
+            software engineer, continuously growing and making a meaningful
+            impact through my work.
+          </p>
         </div>
-      </div>
+      </section>
+      <section id="resume"></section>
+      <section id="services"></section>
+      <section id="projects"></section>
+      <section id="contact"></section>
     </main>
     <footer></footer>
     <script src="script.js"></script>
