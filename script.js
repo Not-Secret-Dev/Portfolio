@@ -12,7 +12,7 @@ NavBtns.forEach((NavBtn) => {
     NavSecs.forEach((NavSec) => {
       if (NavBtn.id === NavSec.id) {
         if (NavSec.style.display === "none") {
-          NavSec.style.display = "block";
+          NavSec.style.display = "inline";
         }
       } else {
         NavSec.style.display = "none";
