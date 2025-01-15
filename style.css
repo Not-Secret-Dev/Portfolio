@@ -116,7 +116,7 @@ header {
   cursor: pointer;
 }
 
-.hero-section {
+main > #home {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -125,7 +125,7 @@ header {
   box-sizing: border-box;
 }
 
-.hero-section .right {
+main > #home .right {
   border-radius: 200px;
   border: 12px solid cornflowerblue;
   background-color: lightblue;
@@ -138,23 +138,23 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
-.hero-section .left {
+main > #home .left {
   width: 50vw;
   max-width: 600px;
 }
 
-.hero-section #name {
+main > #home #name {
   font-size: 36px;
   font-weight: 700;
   color: white;
 }
 
-.hero-section #desc {
+main > #home #desc {
   font-size: 12px;
   margin-bottom: 12px;
 }
 
-.hero-section button {
+main > #home button {
   width: 120px;
   height: 40px;
   border: none;
@@ -168,21 +168,21 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.hero-section button:hover {
+main > #home button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.hero-section button:focus {
+main > #home button:focus {
   outline: none;
 }
 
-.hero-section button:active {
+main > #home button:active {
   transform: translateY(2px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.hero-section .right:hover {
+main > #home .right:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -231,6 +231,129 @@ main #about .description {
   font-weight: 400;
 }
 
+main > #resume {
+  padding: 40px 20px;
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+  color: #f1f1f1;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main > #resume h2#heading {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f1f1f1;
+}
+
+main > #resume .details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main > #resume .details > div {
+  background: #2d2d2d;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+main > #resume h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #f1f1f1;
+}
+
+main > #resume p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+main > #resume ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+main > #resume ul li {
+  font-size: 14px;
+  padding: 6px 0;
+  color: #bbb;
+}
+
+main > #resume ul li:hover {
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  #dropdown-sc-nav {
+    display: none;
+  }
+
+  #Big-sc-nav {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #dropdown-sc-nav ul li {
+    color: black;
+  }
+
+  main > #home {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main > #home .left {
+    width: 80vw;
+    text-align: center;
+  }
+
+  main > #home #name {
+    font-size: 28px;
+  }
+
+  main > #home #desc {
+    font-size: 14px;
+  }
+
+  main > #home button {
+    width: 100px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main > #home .right {
+    margin-top: 12px;
+  }
+
+  main > #home #name {
+    font-size: 24px;
+  }
+
+  main > #home #desc {
+    font-size: 12px;
+  }
+
+  main > #home button {
+    width: 90px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 768px) {
   main #about {
     flex-direction: column;
@@ -254,63 +377,44 @@ main #about .description {
   }
 }
 
-/* Responsive styles */
-@media (min-width: 768px) {
-  #dropdown-sc-nav {
-    display: none;
+@media (max-width: 768px) {
+  main > #resume {
+    padding: 30px 10px;
   }
 
-  #Big-sc-nav {
-    display: flex;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #dropdown-sc-nav ul li {
-    color: black;
+  main > #resume .details {
+    grid-template-columns: 1fr;
   }
 
-  .hero-section {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .hero-section .left {
-    width: 80vw;
-    text-align: center;
-  }
-
-  .hero-section #name {
-    font-size: 28px;
-  }
-
-  .hero-section #desc {
-    font-size: 14px;
-  }
-
-  .hero-section button {
-    width: 100px;
-    height: 35px;
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .hero-section .right {
-    margin-top: 12px;
-  }
-
-  .hero-section #name {
+  main > #resume h2#heading {
     font-size: 24px;
   }
 
-  .hero-section #desc {
-    font-size: 12px;
+  main > #resume h3 {
+    font-size: 18px;
   }
 
-  .hero-section button {
-    width: 90px;
-    height: 35px;
+  main > #resume p,
+  main > #resume ul li {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  main > #resume {
+    padding: 20px;
+  }
+
+  main > #resume h2#heading {
+    font-size: 20px;
+  }
+
+  main > #resume h3 {
+    font-size: 16px;
+  }
+
+  main > #resume p,
+  main > #resume ul li {
+    font-size: 10px;
   }
 }
