@@ -231,66 +231,84 @@ main #about .description {
   font-weight: 400;
 }
 
-main > #resume {
-  padding: 40px 20px;
-  background: rgba(20, 20, 20, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin-top: 40px;
-  color: #f1f1f1;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+main #resume {
+  padding: 20px 30px;
+  height: 80vh;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  background-size: 400% 400%;
+  animation: wave 5s ease infinite;
+  color: #fff;
 }
 
-main > #resume h2#heading {
-  font-size: 28px;
-  font-weight: 600;
+main #resume #heading {
   text-align: center;
-  margin-bottom: 20px;
-  color: #f1f1f1;
 }
 
-main > #resume .details {
+main #resume .details {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  height: 90%;
 }
 
-main > #resume .details > div {
-  background: #2d2d2d;
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+main #resume .details .contents {
+  display: none;
 }
 
-main > #resume h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #f1f1f1;
+main #resume .details #education,
+#experience,
+#skills,
+#languages {
+  border: 2px solid;
+  border-radius: 5px;
+  width: 250px;
+  height: 100px;
+  display: inline;
+  transition: all 0.4s ease-out;
+  padding: 23px;
 }
 
-main > #resume p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #bbb;
-}
-
-main > #resume ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-main > #resume ul li {
-  font-size: 14px;
-  padding: 6px 0;
-  color: #bbb;
-}
-
-main > #resume ul li:hover {
-  color: #007bff;
+main #resume .details #education:hover,
+#experience:hover,
+#skills:hover,
+#languages:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+}
+
+main #resume .details #education:focus,
+#experience:focus,
+#skills:focus,
+#languages:focus {
+  outline: none;
+}
+
+main #resume .details #education:active,
+#experience:active,
+#skills:active,
+#languages:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+main #resume .details .open {
+  width: 800px;
+  height: 350px;
+  transition: all 0.4s;
+  padding-left: 23px;
+  margin-left: 23px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+main #resume .details .close {
+  transition: all 0.4s;
+  display: none;
 }
 
 /* Responsive styles */
@@ -377,44 +395,39 @@ main > #resume ul li:hover {
   }
 }
 
-@media (max-width: 768px) {
-  main > #resume {
-    padding: 30px 10px;
-  }
-
-  main > #resume .details {
-    grid-template-columns: 1fr;
-  }
-
-  main > #resume h2#heading {
-    font-size: 24px;
-  }
-
-  main > #resume h3 {
-    font-size: 18px;
-  }
-
-  main > #resume p,
-  main > #resume ul li {
-    font-size: 12px;
+@media (min-width: 768px) {
+  main #resume .details {
+    flex-direction: row;
   }
 }
 
-@media (max-width: 480px) {
-  main > #resume {
-    padding: 20px;
+@media screen and (max-width: 768px) {
+  main #resume .details {
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
   }
 
-  main > #resume h2#heading {
-    font-size: 20px;
+  main #resume .details .contents {
+    width: 90%;
   }
 
-  main > #resume h3 {
-    font-size: 16px;
+  main #resume .details #education,
+  #experience,
+  #skills,
+  #languages {
+    width: 90%;
+    display: block;
+    padding: 10px;
+    height: 15%;
   }
 
-  main > #resume p,
-  main > #resume ul li {
-    font-size: 10px;
+  main #resume .details .open {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    margin-left: -10px;
+    font-size: small;
   }
 }

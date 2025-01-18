@@ -1,7 +1,11 @@
 const dropDownMenuBtn = document.querySelector("#dropdown-sc-nav button");
 const dropDownMenu = document.querySelector("#dropdown-sc-nav ul");
 const NavBtns = document.querySelectorAll("nav ul li");
-const NavSecs = document.querySelectorAll("section");
+const navSecs = document.querySelectorAll("section");
+const resumeBtns = document.querySelectorAll(".resume-btn");
+const resumeContents = document.querySelectorAll(
+  "main #resume .details .contents"
+);
 
 dropDownMenuBtn.addEventListener("click", () => {
   dropDownMenu.classList.toggle("show");
@@ -9,17 +13,44 @@ dropDownMenuBtn.addEventListener("click", () => {
 
 NavBtns.forEach((NavBtn) => {
   NavBtn.addEventListener("click", () => {
-    NavSecs.forEach((NavSec) => {
-      if (NavBtn.id === NavSec.id) {
-        if (NavSec.style.display === "none") {
-          NavSec.style.display = "flex";
-          if (NavSec.id === "resume") {
-            NavSec.style.display = "block";
+    navSecs.forEach((navSec) => {
+      if (NavBtn.id === navSec.id) {
+        if (navSec.style.display === "none") {
+          navSec.style.display = "flex";
+          if (navSec.id === "resume") {
+            navSec.style.display = "block";
           }
         }
       } else {
-        NavSec.style.display = "none";
+        navSec.style.display = "none";
       }
     });
+  });
+});
+
+resumeBtns.forEach((resumeBtn) => {
+  resumeBtn.addEventListener("click", () => {
+    const isOpen = resumeBtn.classList.contains("open");
+
+    resumeBtns.forEach((btn) => {
+      btn.classList.remove("open");
+      btn.classList.add("close");
+      btn.style.display = "inline";
+    });
+
+    resumeContents.forEach((content) => {
+      content.style.display = "none";
+      content.classList.remove("open");
+    });
+
+    if (!isOpen) {
+      resumeBtn.classList.add("open");
+      resumeContents.forEach((content) => {
+        if (content.classList.contains(resumeBtn.id)) {
+          content.style.display = "inline";
+          content.classList.add("open");
+        }
+      });
+    }
   });
 });
