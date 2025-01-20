@@ -6,9 +6,20 @@ const resumeBtns = document.querySelectorAll(".resume-btn");
 const resumeContents = document.querySelectorAll(
   "main #resume .details .contents"
 );
+const contactMeBtn = document.getElementById("contact-btn");
 
 dropDownMenuBtn.addEventListener("click", () => {
   dropDownMenu.classList.toggle("show");
+});
+
+contactMeBtn.addEventListener("click", () => {
+  navSecs.forEach((navSec) => {
+    if (navSec.id === "contact") {
+      navSec.style.display = "flex";
+    } else {
+      navSec.style.display = "none";
+    }
+  });
 });
 
 NavBtns.forEach((NavBtn) => {
