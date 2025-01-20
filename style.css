@@ -369,6 +369,109 @@ section#services .service:hover p {
   display: inline;
 }
 
+main #contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  height: auto;
+  padding: 20px;
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  color: white;
+  height: 90vh;
+}
+
+main #contact #heading h2 {
+  font-size: xx-large;
+}
+
+main #contact #heading {
+  font-size: larger;
+}
+
+main #contact #heading .contact-info h3 {
+  font-size: large;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+main #contact #heading .contact-info p {
+  font-size: small;
+}
+
+main #contact .contact-container {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 10px 20px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+main #contact #contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+main #contact .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main #contact .input-group input,
+main #contact .input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+main #contact .input-group input:focus,
+main #contact .input-group textarea:focus {
+  border: 1px solid #007bff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+main #contact .input-group textarea {
+  resize: none;
+  height: 120px;
+}
+
+main #contact button {
+  background-color: #007bff;
+  width: 100%;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main #contact button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+main #contact button:active {
+  transform: translateY(2px);
+}
+
 /* Responsive styles */
 @media (min-width: 768px) {
   #dropdown-sc-nav {
@@ -494,5 +597,92 @@ section#services .service:hover p {
   main #services {
     display: block;
     text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  main #contact {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  main #contact #heading {
+    text-align: center;
+    font-size: medium;
+  }
+
+  main #contact #heading h2 {
+    font-size: large;
+  }
+
+  main #contact #heading .contact-info h3 {
+    font-size: medium;
+  }
+
+  main #contact #heading .contact-info p {
+    font-size: small;
+  }
+}
+
+@media (max-width: 768px) {
+  main #contact {
+    padding: 15px;
+  }
+
+  main #contact .contact-container {
+    padding: 20px 15px;
+    width: 90%;
+    flex: 1 1 300px;
+    order: 1;
+  }
+
+  main #contact #contact-form {
+    gap: 10px;
+  }
+
+  main #contact .input-group input,
+  main #contact .input-group textarea {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  main #contact button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  main #contact {
+    padding: 10px;
+  }
+
+  main #contact .contact-container {
+    width: 100%;
+    padding: 15px 10px;
+  }
+
+  main #contact #heading h2 {
+    margin: 23px;
+    font-size: medium;
+  }
+
+  main #contact #heading .contact-info h3 {
+    font-size: small;
+  }
+
+  main #contact #heading .contact-info p {
+    font-size: x-small;
+  }
+
+  main #contact .input-group input,
+  main #contact .input-group textarea {
+    font-size: 12px;
+  }
+
+  main #contact button {
+    font-size: 13px;
   }
 }
