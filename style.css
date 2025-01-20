@@ -311,6 +311,64 @@ main #resume .details .close {
   display: none;
 }
 
+section#services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 87vh;
+}
+
+section#services #heading {
+  margin: 12px;
+  font-size: xx-large;
+}
+
+section#services .services-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section#services .service {
+  width: 300px;
+  height: 200px;
+  padding: 23px;
+  margin: 12px 23px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border: 2px solid;
+  border-radius: 8px;
+  transition: 0.3s all;
+}
+
+section#services .service:hover {
+  scale: 1.02;
+  rotate: -2deg;
+  cursor: pointer;
+  background-color: #eee;
+}
+
+section#services .service p {
+  display: none;
+}
+
+section#services .service:hover h3 {
+  color: #333;
+  font-weight: bold;
+  transform: translateY(-2px);
+}
+
+section#services .service:hover p {
+  color: #555;
+  font-style: italic;
+  transform: translateY(2px);
+  display: inline;
+}
+
 /* Responsive styles */
 @media (min-width: 768px) {
   #dropdown-sc-nav {
@@ -429,5 +487,12 @@ main #resume .details .close {
     margin-top: 10px;
     margin-left: -10px;
     font-size: small;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main #services {
+    display: block;
+    text-align: center;
   }
 }
