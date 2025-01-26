@@ -15,7 +15,9 @@ dropDownMenuBtn.addEventListener("click", () => {
 contactMeBtn.addEventListener("click", () => {
   navSecs.forEach((navSec) => {
     if (navSec.id === "contact") {
-      navSec.style.display = "flex";
+      setTimeout(() => {
+        navSec.style.display = "flex";
+      }, 1000);
     } else {
       navSec.style.display = "none";
     }
