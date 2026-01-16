@@ -4,18 +4,18 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaGithub, FaInstagram, FaArrowRight } from "react-icons/fa";
 
 const HeroSection = styled.section`
-  min-height: 90dvh;
-  padding: 20px;
-  background: linear-gradient(45deg, #242247, #101722, #1d2a4e);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 90vh;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  background: #0a0f1a;
   color: white;
   font-family: "Inter", sans-serif;
   overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
 
-  /* Decorative elements */
+  /* Decorative background elements */
   &::before {
     content: "";
     position: absolute;
@@ -24,16 +24,15 @@ const HeroSection = styled.section`
     border-radius: 50%;
     background: radial-gradient(
       circle,
-      rgba(56, 120, 240, 0.1) 0%,
+      rgba(56, 120, 240, 0.05) 0%,
       transparent 70%
     );
-    top: -150px;
+    top: 10%;
     left: -150px;
 
     @media (max-width: 768px) {
       width: 200px;
       height: 200px;
-      top: -100px;
       left: -100px;
     }
   }
@@ -46,16 +45,15 @@ const HeroSection = styled.section`
     border-radius: 50%;
     background: radial-gradient(
       circle,
-      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.03) 0%,
       transparent 70%
     );
-    bottom: -200px;
+    bottom: 10%;
     right: -200px;
 
     @media (max-width: 768px) {
       width: 250px;
       height: 250px;
-      bottom: -125px;
       right: -125px;
     }
   }
@@ -66,6 +64,7 @@ const HeroSection = styled.section`
     align-items: center;
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
     gap: 40px;
     position: relative;
     z-index: 1;
@@ -82,21 +81,22 @@ const HeroSection = styled.section`
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 
     @media (max-width: 768px) {
       max-width: 100%;
       align-items: center;
+      gap: 20px;
     }
   }
 
   .texts {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 
     p:first-child {
-      color: #3878f0;
+      color: #3c83f6;
       font-family: "Courier New", monospace;
       font-size: 1.1rem;
       line-height: 1.4;
@@ -110,54 +110,62 @@ const HeroSection = styled.section`
       }
 
       span {
-        color: white;
-        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        background: linear-gradient(90deg, #3c83f6, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: clamp(3rem, 5vw, 4.5rem);
         font-weight: 800;
         font-family: "Inter", sans-serif;
         display: block;
-        margin-top: 10px;
+        margin-top: 8px;
         line-height: 1.1;
+        letter-spacing: -0.5px;
 
         @media (max-width: 768px) {
-          font-size: clamp(2rem, 6vw, 3.5rem);
+          font-size: clamp(2.2rem, 6vw, 3.5rem);
+          margin-top: 6px;
         }
       }
     }
 
     p:nth-child(2) {
-      color: white;
-      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-      font-weight: 600;
-      margin-top: 5px;
+      color: rgba(255, 255, 255, 0.95);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 700;
+      margin-top: 4px;
 
       @media (max-width: 768px) {
-        font-size: clamp(1.1rem, 3vw, 1.5rem);
+        font-size: clamp(1.3rem, 3vw, 1.8rem);
       }
     }
 
     p:nth-child(3) {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      font-weight: 400;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 500;
+      margin-bottom: 8px;
 
       @media (max-width: 768px) {
-        font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+        font-size: clamp(1rem, 2.5vw, 1.3rem);
       }
     }
 
     p:nth-child(5) {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: clamp(0.9rem, 1.5vw, 1rem);
-      line-height: 1.6;
-      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: clamp(1rem, 1.5vw, 1.1rem);
+      line-height: 1.7;
+      margin-top: 0;
+      margin-bottom: 8px;
 
       @media (max-width: 768px) {
         font-size: 1rem;
         padding: 0 10px;
+        line-height: 1.6;
       }
 
       @media (max-width: 480px) {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         padding: 0;
       }
     }
@@ -165,8 +173,9 @@ const HeroSection = styled.section`
 
   .btns {
     display: flex;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 20px;
+    margin-top: 0;
+    margin-bottom: 8px;
 
     @media (max-width: 768px) {
       justify-content: center;
@@ -176,19 +185,19 @@ const HeroSection = styled.section`
       flex-direction: column;
       width: 100%;
       max-width: 300px;
-      gap: 12px;
+      gap: 15px;
     }
 
     button {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 8px;
-      height: 48px;
-      padding: 0 24px;
-      font-size: 1rem;
-      font-weight: 500;
-      border-radius: 8px;
+      gap: 10px;
+      height: 52px;
+      padding: 0 28px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border-radius: 10px;
       cursor: pointer;
       transition: all 0.3s ease;
       border: none;
@@ -196,18 +205,19 @@ const HeroSection = styled.section`
 
       @media (max-width: 480px) {
         width: 100%;
-        padding: 0 20px;
+        padding: 0 24px;
+        height: 50px;
       }
 
       &:first-child {
-        background: #3c83f6;
+        background: linear-gradient(135deg, #3c83f6, #2a6fd9);
         color: white;
-        min-width: 150px;
+        min-width: 160px;
 
         &:hover {
-          background: #2a6fd9;
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(56, 120, 240, 0.3);
+          background: linear-gradient(135deg, #2a6fd9, #1a5fca);
+          transform: translateY(-3px);
+          box-shadow: 0 10px 25px rgba(56, 120, 240, 0.3);
         }
 
         &:active {
@@ -216,15 +226,15 @@ const HeroSection = styled.section`
       }
 
       &:last-child {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05);
         color: white;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        min-width: 120px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        min-width: 140px;
 
         &:hover {
-          background: rgba(255, 255, 255, 0.15);
-          border-color: rgba(255, 255, 255, 0.3);
-          transform: translateY(-2px);
+          background: rgba(255, 255, 255, 0.08);
+          border-color: rgba(255, 255, 255, 0.2);
+          transform: translateY(-3px);
         }
 
         &:active {
@@ -238,27 +248,39 @@ const HeroSection = styled.section`
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 0;
 
     @media (max-width: 768px) {
       justify-content: center;
     }
 
-    svg {
-      width: 28px;
-      height: 28px;
-      color: rgba(255, 255, 255, 0.7);
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
       transition: all 0.3s ease;
-      cursor: pointer;
 
       &:hover {
-        color: #3c83f6;
+        background: rgba(56, 120, 240, 0.1);
+        border-color: #3c83f6;
         transform: translateY(-3px);
       }
 
-      @media (max-width: 480px) {
+      svg {
         width: 24px;
         height: 24px;
+        color: rgba(255, 255, 255, 0.7);
+        transition: all 0.3s ease;
+
+        @media (max-width: 480px) {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
   }
@@ -268,24 +290,22 @@ const HeroSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 400px;
 
     @media (max-width: 768px) {
-      min-height: 300px;
       width: 100%;
-      order: -1; /* Move to top on mobile */
+      order: -1;
     }
 
-    /* Placeholder for image or graphic */
     .hero-graphic {
       width: 100%;
       max-width: 500px;
-      height: 400px;
+      height: 380px;
       background: linear-gradient(
         135deg,
         rgba(56, 120, 240, 0.1),
         rgba(255, 255, 255, 0.05)
       );
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 20px;
       position: relative;
       overflow: hidden;
@@ -293,13 +313,17 @@ const HeroSection = styled.section`
       justify-content: center;
       align-items: center;
 
+      @media (max-width: 1024px) {
+        height: 340px;
+      }
+
       @media (max-width: 768px) {
-        height: 300px;
+        height: 280px;
         max-width: 400px;
       }
 
       @media (max-width: 480px) {
-        height: 250px;
+        height: 240px;
       }
 
       &::before {
@@ -309,7 +333,7 @@ const HeroSection = styled.section`
         height: 200px;
         background: radial-gradient(
           circle,
-          rgba(56, 120, 240, 0.2) 0%,
+          rgba(56, 120, 240, 0.1) 0%,
           transparent 70%
         );
         border-radius: 50%;
@@ -323,7 +347,7 @@ const HeroSection = styled.section`
         height: 150px;
         background: radial-gradient(
           circle,
-          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0.05) 0%,
           transparent 70%
         );
         border-radius: 50%;
@@ -335,15 +359,22 @@ const HeroSection = styled.section`
         z-index: 2;
         color: rgba(255, 255, 255, 0.9);
         font-family: "Courier New", monospace;
-        font-size: 1.2rem;
-        padding: 20px;
-        text-align: center;
+        font-size: 1.1rem;
+        padding: 25px;
+        text-align: left;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        width: 90%;
+        max-width: 400px;
 
         .line {
           display: flex;
           align-items: center;
           gap: 10px;
-          margin: 10px 0;
+          margin: 12px 0;
+          line-height: 1.4;
 
           .comment {
             color: #4caf50;
@@ -355,6 +386,14 @@ const HeroSection = styled.section`
 
           .string {
             color: #e91e63;
+          }
+
+          .function {
+            color: #3c83f6;
+          }
+
+          .operator {
+            color: #ffffff;
           }
         }
       }
@@ -376,39 +415,44 @@ const HeroSection = styled.section`
 
   /* Tablet specific adjustments */
   @media (max-width: 1024px) {
-    padding: 40px 20px;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    min-height: 90vh;
 
     .container {
       gap: 30px;
     }
 
-    .texts p:nth-child(5) {
-      padding: 0;
+    .texts {
+      gap: 14px;
     }
   }
 
   /* Mobile specific adjustments */
   @media (max-width: 768px) {
-    min-height: 85dvh;
-    padding: 20px 15px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    min-height: auto;
+    padding-top: 100px;
 
     .container {
       gap: 40px;
     }
 
     .left {
-      gap: 15px;
+      gap: 18px;
     }
 
-    .btns {
-      margin-top: 15px;
+    .texts {
+      gap: 12px;
     }
   }
 
   /* Small mobile adjustments */
   @media (max-width: 480px) {
-    min-height: 80dvh;
-    padding: 15px 10px;
+    padding-top: 90px;
+    padding-bottom: 15px;
+    min-height: auto;
 
     .texts p:first-child {
       line-height: 1.3;
@@ -430,19 +474,19 @@ const HeroSection = styled.section`
     }
 
     .texts p:nth-child(2) {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
     .btns button {
-      height: 44px;
-      font-size: 0.95rem;
+      height: 46px;
+      font-size: 1rem;
     }
   }
 `;
 
 const Hero = () => {
   return (
-    <HeroSection>
+    <HeroSection id="hero">
       <div className="container">
         <div className="left">
           <div className="texts">
@@ -484,19 +528,23 @@ const Hero = () => {
                 <span className="comment">// Passionate Developer</span>
               </div>
               <div className="line">
-                <span className="keyword">const</span> developer = &#123;
+                <span className="keyword">const</span>{" "}
+                <span className="function">developer</span>{" "}
+                <span className="operator">=</span> {"{"}
               </div>
               <div className="line">
-                &nbsp;&nbsp;name: <span className="string">"Aayan"</span>,
+                &nbsp;&nbsp;name: <span className="string">"Aayan Mumtaz"</span>
+                ,
               </div>
               <div className="line">
-                &nbsp;&nbsp;role: <span className="string">"Full Stack"</span>,
+                &nbsp;&nbsp;role:{" "}
+                <span className="string">"Full Stack Developer"</span>,
               </div>
               <div className="line">
-                &nbsp;&nbsp;passion:{" "}
-                <span className="string">"Creating Impact"</span>
+                &nbsp;&nbsp;focus:{" "}
+                <span className="string">"Building Digital Experiences"</span>
               </div>
-              <div className="line">&#125;;</div>
+              <div className="line">{"}"};</div>
             </div>
           </div>
         </div>

@@ -450,8 +450,8 @@ const Navbar = () => {
 
       <ul className="nav-links">
         <li onClick={() => handleNavClick("about")}>About</li>
-        <li onClick={() => handleNavClick("projects")}>Projects</li>
         <li onClick={() => handleNavClick("skills")}>Skills</li>
+        <li onClick={() => handleNavClick("experience")}>Experience</li>
         <li onClick={() => handleNavClick("contact")}>Contact</li>
       </ul>
 
@@ -478,8 +478,8 @@ const Navbar = () => {
       <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
         <ul className="mobile-nav-links">
           <li onClick={() => handleNavClick("about")}>About</li>
-          <li onClick={() => handleNavClick("projects")}>Projects</li>
           <li onClick={() => handleNavClick("skills")}>Skills</li>
+          <li onClick={() => handleNavClick("experience")}>experience</li>
           <li onClick={() => handleNavClick("contact")}>Contact</li>
         </ul>
         <button className="mobile-resume-btn" onClick={handleResumeClick}>
