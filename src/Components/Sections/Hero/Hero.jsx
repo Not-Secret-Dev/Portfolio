@@ -485,6 +485,14 @@ const HeroSection = styled.section`
 `;
 
 const Hero = () => {
+  const handleViewWork = () => {
+    window.open("https://github.com/Not-Secret-Dev/", "_blank");
+  };
+
+  const handleContactMe = () => {
+    window.open("mailto:ayaanmumtaz8@gmail.com", "_blank");
+  };
+
   return (
     <HeroSection id="hero">
       <div className="container">
@@ -504,19 +512,25 @@ const Hero = () => {
             </p>
           </div>
           <div className="btns">
-            <button>
+            <button onClick={handleViewWork}>
               View My Work <FaArrowRight />
             </button>
-            <button>Contact Me</button>
+            <button onClick={handleContactMe}>Contact Me</button>
           </div>
           <div className="quick-links">
-            <a href="#" aria-label="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/aayan-mumtaz-aba84831a/"
+              aria-label="LinkedIn"
+            >
               <CiLinkedin />
             </a>
-            <a href="#" aria-label="GitHub">
+            <a href="https://github.com/Not-Secret-Dev/" aria-label="GitHub">
               <FaGithub />
             </a>
-            <a href="#" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/aayan.xp/"
+              aria-label="Instagram"
+            >
               <FaInstagram />
             </a>
           </div>

@@ -398,7 +398,7 @@ const About = () => {
               </div>
             </div>
 
-            <a href="#" className="download-btn">
+            <a href="Resume.pdf" target="_blank" className="download-btn">
               Download Resume
             </a>
           </div>

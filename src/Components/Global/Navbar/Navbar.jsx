@@ -409,12 +409,10 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    // Prevent body scroll when menu is open
     document.body.style.overflow = !isMenuOpen ? "hidden" : "unset";
   };
 
   const handleNavClick = (section) => {
-    // Scroll to section logic here
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -426,10 +424,7 @@ const Navbar = () => {
   };
 
   const handleResumeClick = () => {
-    // Resume download logic here
-    console.log("Downloading resume...");
-    // Example:
-    // window.open("/resume.pdf", "_blank");
+    window.open("/Resume.pdf", "_blank");
   };
 
   return (

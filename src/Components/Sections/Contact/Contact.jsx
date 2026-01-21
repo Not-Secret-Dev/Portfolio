@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import emailjs from "emailjs-com";
+
 import {
   FaPaperPlane,
   FaEnvelope,
@@ -209,7 +211,7 @@ const ContactSection = styled.section`
       align-items: center;
       justify-content: center;
       gap: 10px;
-      width: 100%;
+      width: 106%;
       padding: 16px;
       background: linear-gradient(135deg, #3c83f6, #2a6fd9);
       color: white;
@@ -439,12 +441,37 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", email: "", message: "" });
-    alert("Message sent! I'll get back to you soon.");
+    setIsSubmitting(true);
+
+    const serviceID = "service_tqn9pvi";
+    const templateID = "template_zk9tvgb";
+    const userID = "MXZXWWpQJNzSQvt5H";
+
+    try {
+      await emailjs.send(
+        serviceID,
+        templateID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          reply_to: formData.email,
+        },
+        userID,
+      );
+
+      setFormData({ name: "", email: "", message: "" });
+      alert("Message sent successfully! I'll get back to you soon.");
+    } catch (error) {
+      console.error("Failed to send message:", error);
+      alert("Oops! Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -543,16 +570,6 @@ const Contact = () => {
               <div className="info-content">
                 <h3>BASE OF OPERATIONS</h3>
                 <p>Lahore, Punjab, Pakistan</p>
-              </div>
-            </div>
-
-            <div className="info-item network-item">
-              <div className="info-icon">
-                <FaNetworkWired />
-              </div>
-              <div className="info-content">
-                <h3>CONNECT_VIA_NETWORK</h3>
-                <p>https://www.linkedin.com/in/aayan-mumtaz-aba84831a/</p>
               </div>
             </div>
           </div>
