@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <script>
+      try {
+        if (localStorage.getItem('am-theme') === 'dark') {
+          document.documentElement.classList.add('dark')
+          document.documentElement.style.colorScheme = 'dark'
+        }
+      } catch (error) {
+        /* localStorage unavailable */
+      }
+    </script>
+    <title>Aayan Mumtaz — Software Engineer</title>
+    <meta
+      name="description"
+      content="Aayan Mumtaz is a full-stack and systems engineer in Lahore, Pakistan. Building offline-first mobile tools, web platforms, and low-level C software."
+    />
+    <meta name="author" content="Aayan Mumtaz" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Aayan Mumtaz" />
+    <meta property="og:locale" content="en_PK" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aayan Mumtaz",
+        "jobTitle": "Junior Software Engineer",
+        "email": "ayaanmumtaz8@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lahore",
+          "addressCountry": "PK"
+        },
+        "sameAs": ["https://github.com/Not-Secret-Dev"]
+      }
+    </script>
+    <meta property="og:title" content="Aayan Mumtaz — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Full-stack interfaces, offline-first mobile, and hand-rolled systems software. Portfolio of Aayan Mumtaz."
+    />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <noscript>
+      <div
+        style="
+          min-height: 100svh;
+          display: grid;
+          place-items: center;
+          padding: 2rem;
+          background: #fff;
+          color: #333;
+          font: 14px/1.6 'JetBrains Mono', ui-monospace, monospace;
+          text-align: center;
+        "
+      >
+        <p>
+          This portfolio needs JavaScript to render. You can still email
+          <a href="mailto:ayaanmumtaz8@gmail.com" style="text-decoration: underline">ayaanmumtaz8@gmail.com</a>
+          or download the <a href="/Aayan_Mumtaz_CV.pdf" style="text-decoration: underline">CV</a>.
+        </p>
+      </div>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
