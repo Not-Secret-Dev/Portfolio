@@ -57,7 +57,7 @@ export function About() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              {['Full-stack', 'Mobile', 'Systems', 'Offline-first', 'Open source'].map((tag) => (
+              {['Entry-level', 'Frontend', 'Go', 'C', 'Always learning'].map((tag) => (
                 <span
                   key={tag}
                   className="border border-line-soft px-3 py-1.5 text-[10px] uppercase tracking-[0.14em] text-muted"

@@ -1,6 +1,7 @@
 import { ArrowUp } from 'lucide-react'
 import { navItems, profile } from '../data/content'
 import { GitHubIcon } from './GitHubIcon'
+import { LinkedInIcon } from './LinkedInIcon'
 import { Marquee } from './Marquee'
 import { ThemeToggle } from './ThemeToggle'
 
@@ -9,7 +10,7 @@ export function Footer() {
     <footer className="relative overflow-hidden xl:pr-16">
       <div className="border-b border-line-soft py-6">
         <Marquee duration={46} reverse>
-          {['AAYAN MUMTAZ', 'FULL-STACK', 'SYSTEMS', 'LAHORE, PK'].map((word, index) => (
+          {['AAYAN MUMTAZ', 'ENTRY-LEVEL', 'REACT', 'GO', 'C', 'LAHORE, PK'].map((word, index) => (
             <span key={word} className="flex items-center">
               <span
                 className={`display px-8 text-[clamp(2rem,5vw,3.75rem)] ${
@@ -31,7 +32,8 @@ export function Footer() {
           <div className="max-w-xs">
             <p className="text-[11px] uppercase tracking-[0.2em]">{profile.name}</p>
             <p className="mt-3 text-[12px] leading-relaxed text-muted">
-              Full-stack & systems engineer. Interfaces up top, allocators and sockets underneath.
+              Entry-level software developer. React frontends, small tools in Go, and low-level C
+              projects.
             </p>
             <div className="mt-5 flex items-center gap-2">
               <a
@@ -42,6 +44,15 @@ export function Footer() {
                 className="grid size-9 place-items-center border border-line-soft transition-colors hover:border-ink hover:bg-ink hover:text-paper"
               >
                 <GitHubIcon className="size-4" />
+              </a>
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn profile"
+                className="grid size-9 place-items-center border border-line-soft transition-colors hover:border-ink hover:bg-ink hover:text-paper"
+              >
+                <LinkedInIcon className="size-4" />
               </a>
               <a
                 href={`mailto:${profile.email}`}

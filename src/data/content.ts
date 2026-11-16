@@ -2,18 +2,20 @@ export const profile = {
   name: 'Aayan Mumtaz',
   firstName: 'AAYAN',
   lastName: 'MUMTAZ',
-  role: 'Junior Software Engineer',
-  discipline: 'Full-Stack & Systems',
+  role: 'Entry-Level Software Developer',
+  discipline: 'Computer Information Technology',
   location: 'Lahore, Pakistan',
   email: 'ayaanmumtaz8@gmail.com',
   phone: '+92 329 7528954',
   phoneHref: '+923297528954',
   github: 'https://github.com/Not-Secret-Dev',
   githubHandle: 'Not-Secret-Dev',
+  linkedin: 'https://linkedin.com/in/aayan-mumtaz-aba84831a',
+  linkedinHandle: 'in/aayan-mumtaz-aba84831a',
   site: 'https://ayaan-dev-portfolio.netlify.app',
   siteLabel: 'ayaan-dev-portfolio.netlify.app',
   cv: '/Aayan_Mumtaz_CV.pdf',
-  availability: 'Open to junior roles & internships',
+  availability: 'Open to junior, trainee & internship roles',
 } as const
 
 export const navItems = [
@@ -26,50 +28,46 @@ export const navItems = [
 ] as const
 
 export const marqueeStack = [
+  'HTML',
+  'CSS',
+  'JAVASCRIPT',
   'REACT',
-  'TYPESCRIPT',
-  'NODE.JS',
-  'POSTGRESQL',
+  'GIT',
+  'GITHUB',
+  'LINUX',
   'C',
   'GO',
-  'C++',
-  'LINUX',
-  'REACT NATIVE',
-  'DOCKER',
-  'EXPO',
-  'TAILWIND',
-  'MONGODB',
-  'GIT',
+  'PYTHON',
 ] as const
 
 export const stats = [
-  { value: '04', label: 'Projects shipped' },
+  { value: '03', label: 'Projects shipped' },
   { value: '02', label: 'Professional roles' },
-  { value: '21', label: 'Tools in rotation' },
+  { value: '10', label: 'Tools in rotation' },
   { value: '03', label: 'Languages spoken' },
 ] as const
 
 export const about = {
   intro:
-    "I'm Aayan — a junior engineer from Lahore who likes software that still behaves when the network drops, the memory runs out, or the diagram gets complicated.",
+    "I'm Aayan — a Computer Information Technology graduate from Lahore at the start of a software career, learning by building small, complete things.",
   body: [
-    'On the product side I work in React and React Native: component systems, REST integrations, and interfaces that stay usable offline. Underneath that I write C — allocators, epoll servers, small Unix utilities — because building the primitives is the fastest way to understand why the higher layers behave the way they do.',
-    "My path ran through a full-stack internship at Developer'sHub and a year of IT support at Lahori Qulfa, where the problems were hardware, accounts, and networks rather than pull requests. Both taught the same lesson: a system is only as good as its weakest handoff.",
+    "I've built small projects in C, Go, and React, and completed a two-month web development internship at Developer'sHub. I'm comfortable reading and understanding code, and I'm currently strengthening my hands-on fundamentals in HTML, CSS, and JavaScript.",
+    "I also tutor secondary-level students in computer science basics. Explaining the fundamentals keeps them sharp — and it's a good reminder that if I can't explain something simply, I probably don't understand it yet.",
   ],
 } as const
 
 export const principles = [
   {
-    title: 'Ship the whole path',
-    body: 'Schema, service, and pixel belong to the same feature — none of them are someone else’s problem.',
+    title: 'Build to understand',
+    body: 'A small finished project teaches more than a large unfinished one — so finish the small ones.',
   },
   {
     title: 'Understand the floor',
     body: 'Allocators, sockets, and file descriptors explain most of the bugs that look mysterious upstairs.',
   },
   {
-    title: 'Leave it legible',
-    body: 'Clear names and small surfaces beat clever shortcuts six months later.',
+    title: 'Stay teachable',
+    body: 'Feedback is faster than guessing. Ask early, take notes, and keep the next attempt simpler.',
   },
 ] as const
 
@@ -91,22 +89,19 @@ export const experience: Experience[] = [
     location: 'Lahore, PK',
     detail: 'Internship',
     bullets: [
-      'Built responsive React interfaces and wired them to REST endpoints across the product.',
-      'Tracked down bugs across client and server code inside a Git-based review workflow.',
+      'Built the frontend of an e-commerce store project using React during a two-month internship.',
+      'Built a backend for an existing frontend and helped debug frontend and backend issues using Git.',
     ],
-    tags: ['React', 'REST APIs', 'Git', 'Debugging'],
+    tags: ['React', 'Frontend', 'Backend', 'Git'],
   },
   {
-    company: 'Lahori Qulfa',
-    role: 'IT Support',
-    period: '~1 year',
+    company: 'Computer Science Tutor',
+    role: 'Part-time',
+    period: 'Ongoing',
     location: 'Lahore, PK',
-    detail: 'Support',
-    bullets: [
-      'Kept hardware, software, and local-network issues from turning into staff downtime.',
-      'Handled system setup, user accounts, and day-to-day technical requests.',
-    ],
-    tags: ['Hardware', 'Networking', 'Windows', 'Troubleshooting'],
+    detail: 'Tutoring',
+    bullets: ['Explain computer science basics to secondary-level students.'],
+    tags: ['Teaching', 'Fundamentals', 'Communication'],
   },
 ]
 
@@ -118,21 +113,23 @@ export type Project = {
   blurb: string
   bullets: string[]
   tech: string[]
+  repo: string
 }
 
 export const projects: Project[] = [
   {
     index: '01',
-    title: 'ShelfSync',
-    category: 'Mobile · Offline-first',
-    subtitle: 'Inventory that works in a dead zone.',
+    title: 'Taskly',
+    category: 'CLI · Go',
+    subtitle: 'A terminal task manager that keeps the list honest.',
     blurb:
-      'A React Native inventory app for shop floors and stockrooms. Stock lives in SQLite first, barcodes scan on-device, and edits reconcile with a PostgreSQL backend once a connection returns.',
+      'A command-line task manager built in Go, with priorities, due dates, overdue flags, completion stats, and CSV file storage so the list survives between sessions.',
     bullets: [
-      'Conflict-resolution sync merges local and remote edits instead of last-write-wins.',
-      'Expo + TypeScript app backed by a Node/PostgreSQL API.',
+      'Organised into separate domain, application, storage, and UI packages.',
+      'Includes unit tests and a README documenting the commands and structure.',
     ],
-    tech: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Node.js', 'PostgreSQL'],
+    tech: ['Go', 'CLI', 'CSV', 'Unit tests'],
+    repo: 'https://github.com/Not-Secret-Dev/taskly',
   },
   {
     index: '02',
@@ -140,38 +137,27 @@ export const projects: Project[] = [
     category: 'Systems · C',
     subtitle: 'A heap allocator written from first principles.',
     blurb:
-      'my_malloc, my_free, and realloc implemented without leaning on the standard library allocator. Block headers track size and state so freed memory can be split and merged back into usable chunks.',
+      'A learning project that recreates malloc, free, and realloc behaviour using heap blocks with metadata, without leaning on the standard library allocator.',
     bullets: [
-      'Splitting and coalescing keep fragmentation in check across a long-running workload.',
-      'An exercise in pointer arithmetic, alignment, and packing metadata into the heap itself.',
+      'Explores how memory is split and merged (coalescing) to reuse freed space.',
+      'An exercise in pointer arithmetic, alignment, and block headers.',
     ],
     tech: ['C', 'Memory', 'Pointers'],
+    repo: 'https://github.com/Not-Secret-Dev/Custom-Memory-Allocator',
   },
   {
     index: '03',
-    title: 'MiniKV',
-    category: 'Networking · Linux',
-    subtitle: 'A TCP key–value store that keeps many clients talking.',
+    title: 'Personal Portfolio Website',
+    category: 'Web · React',
+    subtitle: 'The site you are reading right now.',
     blurb:
-      'A single-process server built on non-blocking sockets and epoll — no thread per connection. Keys expire on a TTL, and state survives restarts through an append-only log.',
+      'A personal website showcasing projects and contact details, built with React and deployed online with Netlify.',
     bullets: [
-      'Event-loop architecture handles concurrent clients without blocking the accept path.',
-      'In-memory hash table with expiry and crash-recoverable persistence.',
+      'Project gallery, downloadable CV, and contact details in one place.',
+      'Deployed and served through Netlify.',
     ],
-    tech: ['C', 'Linux', 'Sockets', 'epoll'],
-  },
-  {
-    index: '04',
-    title: 'Flowboard',
-    category: 'Interface · Web',
-    subtitle: 'A diagram editor you can actually drag.',
-    blurb:
-      'A node-based editor drawn in SVG: pan, zoom, drag nodes, and run undo/redo without losing your place. The interaction model stays precise at any scale.',
-    bullets: [
-      'Custom pointer math for panning, zooming, and snapping nodes.',
-      'Undo/redo built on an immutable history stack.',
-    ],
-    tech: ['React', 'TypeScript', 'SVG', 'State'],
+    tech: ['React', 'JavaScript', 'Netlify'],
+    repo: 'https://github.com/Not-Secret-Dev/Portfolio',
   },
 ]
 
@@ -184,23 +170,18 @@ export type SkillGroup = {
 export const skillGroups: SkillGroup[] = [
   {
     index: '01',
-    label: 'Languages',
-    items: ['C', 'Python', 'JavaScript', 'TypeScript', 'SQL'],
+    label: 'Working Knowledge',
+    items: ['HTML', 'CSS', 'JavaScript', 'React', 'Git', 'GitHub', 'Linux'],
   },
   {
     index: '02',
-    label: 'Frontend & Mobile',
-    items: ['React', 'React Native', 'Expo', 'Vite', 'Tailwind CSS'],
+    label: 'Familiar With',
+    items: ['C', 'Go', 'Python'],
   },
   {
     index: '03',
-    label: 'Backend & Systems',
-    items: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'REST APIs', 'Linux', 'Golang', 'C/C++'],
-  },
-  {
-    index: '04',
-    label: 'Tools',
-    items: ['Git', 'Docker', 'Postman'],
+    label: 'Currently Practising',
+    items: ['Web pages', 'Components', 'JavaScript fundamentals'],
   },
 ]
 
@@ -208,19 +189,13 @@ export const education = [
   {
     credential: 'DAE — Computer Information Technology (CIT)',
     institution: 'Government College of Technology, Lahore',
-    period: '2023 — 2026',
-    location: 'Lahore, PK',
-  },
-  {
-    credential: 'Matriculation — Computer Science',
-    institution: 'Government Boys High School, Baghbanpura',
-    period: '2021 — 2023',
+    period: '2023 — September 2026',
     location: 'Lahore, PK',
   },
 ] as const
 
 export const languages = [
   { name: 'Urdu', level: 'Native', meter: 100 },
-  { name: 'English', level: 'B2 · Conversational', meter: 65 },
-  { name: 'German', level: 'A2 · Elementary', meter: 35 },
+  { name: 'English', level: 'B2 · Upper Intermediate', meter: 70 },
+  { name: 'German', level: 'A1 · Beginner', meter: 25 },
 ] as const

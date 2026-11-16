@@ -3,6 +3,7 @@ import { Download, Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { navItems, profile } from '../data/content'
 import { GitHubIcon } from './GitHubIcon'
+import { LinkedInIcon } from './LinkedInIcon'
 import { ThemeToggle } from './ThemeToggle'
 
 export function Nav() {
@@ -165,6 +166,15 @@ export function Nav() {
                 >
                   <GitHubIcon className="size-3.5" />
                   GitHub
+                </a>
+                <a
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link-underline flex items-center gap-2"
+                >
+                  <LinkedInIcon className="size-3.5" />
+                  LinkedIn
                 </a>
               </div>
             </div>

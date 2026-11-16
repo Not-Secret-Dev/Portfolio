@@ -72,20 +72,19 @@ export function Hero() {
               {...fade(0.28)}
               className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] uppercase tracking-[0.24em] text-muted"
             >
-              <span>Full-stack engineer</span>
+              <span>Entry-level software developer</span>
               <span className="text-line" aria-hidden="true">
                 /
               </span>
-              <span>Systems programmer</span>
+              <span>CIT graduate</span>
             </motion.p>
 
             <motion.p
               {...fade(0.36)}
               className="mt-6 max-w-[48ch] text-[14px] leading-relaxed text-muted md:text-[15px]"
             >
-              I build the interface and the machinery underneath it — React and React Native for
-              products people touch, C and sockets for when the abstraction needs to move out of the
-              way.
+              I build small, complete projects in React, Go, and C — and I'm strengthening my
+              fundamentals in HTML, CSS, and JavaScript one page at a time.
             </motion.p>
 
             <motion.div {...fade(0.44)} className="mt-9 flex flex-wrap items-center gap-3">

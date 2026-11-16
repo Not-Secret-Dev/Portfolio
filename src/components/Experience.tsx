@@ -12,7 +12,7 @@ export function Experience() {
         <SectionHeading
           index="02"
           title="Experience"
-          description="Two roles, two very different definitions of “it's broken”."
+          description="An internship and a tutoring practice — building software and explaining it."
         />
 
         <div className="mt-8 flex flex-1 flex-col">

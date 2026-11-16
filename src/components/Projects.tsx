@@ -58,10 +58,10 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
         <a
-          href={profile.github}
+          href={project.repo}
           target="_blank"
           rel="noreferrer"
-          aria-label={`${project.title} — see Aayan Mumtaz's GitHub profile`}
+          aria-label={`${project.title} — see the repository on GitHub`}
           className="flex items-center gap-2 text-[9px] uppercase tracking-[0.16em] text-muted transition-colors hover:text-ink group-hover:text-paper/60 group-hover:hover:text-paper"
         >
           <GitHubIcon className="size-4" />
@@ -170,7 +170,7 @@ export function Projects() {
         <SectionHeading
           index="03"
           title="Selected work"
-          description="Four builds that exercise different parts of the stack — mobile, memory, networking, interface."
+          description="Three builds from the résumé — a Go CLI, a C allocator, and this site."
         />
 
         <Reveal className="mt-6 flex flex-wrap items-center justify-between gap-5">

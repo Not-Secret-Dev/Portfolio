@@ -2,6 +2,7 @@ import { ArrowUpRight, Check, Copy, Globe, Mail, MapPin, Phone, Send } from 'luc
 import { useEffect, useRef, useState, type ChangeEvent, type ComponentType, type FormEvent } from 'react'
 import { profile } from '../data/content'
 import { GitHubIcon } from './GitHubIcon'
+import { LinkedInIcon } from './LinkedInIcon'
 import { Reveal } from './Reveal'
 import { SectionHeading } from './SectionHeading'
 
@@ -46,6 +47,13 @@ const contactRows: ContactRow[] = [
     value: `@${profile.githubHandle}`,
     href: profile.github,
     icon: GitHubIcon,
+    external: true,
+  },
+  {
+    label: 'LinkedIn',
+    value: profile.linkedinHandle,
+    href: profile.linkedin,
+    icon: LinkedInIcon,
     external: true,
   },
   {
@@ -152,7 +160,7 @@ export function Contact() {
         <SectionHeading
           index="06"
           title="Contact"
-          description="Open to junior roles, internships, and interesting systems problems."
+          description="Open to junior, trainee, and internship roles."
         />
 
         <div className="mt-8 grid flex-1 gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
@@ -161,9 +169,8 @@ export function Contact() {
               Let's build something that holds.
             </h3>
             <p className="mt-4 max-w-[48ch] text-[13px] leading-relaxed text-muted">
-              Whether it's a web platform, an offline-first mobile tool, or something that has to
-              survive a flaky network — send the problem and the constraints. I'll reply from
-              Lahore, usually within a day.
+              Whether it's a web page, a small tool, or a problem you want another pair of eyes on
+              — send the details and the constraints. I'll reply from Lahore, usually within a day.
             </p>
 
             <div className="mt-6 divide-y divide-line-soft border-y border-line-soft">
